@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página pessoal - Gabrel Henrique Fernandes Geoffroy</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background-color: #000000; color: #d4af37; }
+
+    header, section, footer { width: min(900px, 90%); margin: 0 auto; }
+    header { padding: 48px 0 32px; text-align: center; }
+    nav { width: min(900px, 90%); margin: 0 auto; padding: 16px 0 24px; text-align: center; }
+    nav a { color: #ffd700; }
+    nav a:hover { color: #ffffff; }
+
+    h1, h2 { color: #d4af37; }
+
+    section { margin-bottom: 24px; padding: 24px; background: #111111; border: 1px solid #d4af37; border-radius: 12px; box-shadow: 0 4px 12px rgb(212 175 55 / 20%); }
+    .apresentacao { display: flex; align-items: center; gap: 24px; }
+    .foto-perfil { width: 140px; height: 140px; flex-shrink: 0; border-radius: 50%; border: 4px solid #d4af37; }
+    li { margin-bottom: 8px; }
+    footer { padding: 16px 0 32px; text-align: center; color: #d4af37; }
+    a { color: #ffd700; }
+    a:hover { color: #ffffff; }
+    @media (max-width: 600px) { .apresentacao { flex-direction: column; text-align: center; } }
+  </style>
+</head>
+<body>
+  <header id="inicio">
+    <h1>Olá! Eu sou Gabrel Geoffroy</h1>
+    <p>Estudante de Técnico em Informática para Internet e interessado em tecnologia.</p>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <a href="#inicio">Início</a> |
+    <a href="sobre.html">Sobre a página</a>
+  </nav>
+
+  <main>
+    <section class="apresentacao">
+      <img class="foto-perfil" src="img/Geoffroy.PNG" alt="Foto de Gabriel Geoffroy">
+      <div>
+        <h2>Sobre mim</h2>
+        <p>Meu nome é Gabrel Henrique Fernandes Geoffroy. Sou estudante e estou aprendendo a criar páginas web com HTML e CSS na disciplina de Programação Web I.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Meus hobbies e interesses</h2>
+      <ul>
+        <li>Aprender programação e novas tecnologias</li>
+        <li>Criar páginas e projetos para a web</li>
+        <li>Pesquisar assuntos relacionados à informática</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Página pessoal criada para a disciplina Programação Web I.</p>
+    <p>
+      <a href="https://www.linkedin.com/in/gabriel-geoffroy-611224204/" target="_blank" rel="noopener noreferrer">
+        Meu perfil no LinkedIn
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
