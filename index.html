@@ -1,128 +1,75 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página pessoal - Gabriel Henrique Fernandes Geoffroy</title>
-  <style>
-    * { box-sizing: border-box; }
+<!DOCTYPE html> <!-- Informa ao navegador que este documento usa HTML5. -->
+<html lang="pt-BR"> <!-- Define o idioma principal da página. -->
+<head> <!-- Configurações e metadados da página. -->
+  <meta charset="UTF-8"> <!-- Permite a exibição correta dos acentos. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta a página a celulares e tablets. -->
+  <title>Página pessoal - Gabriel Henrique Fernandes Geoffroy</title> <!-- Título exibido na aba do navegador. -->
+  <link rel="stylesheet" href="style.css">
+</head> <!-- Encerra as configurações da página. -->
+<body> <!-- Inicia o conteúdo visível da página. -->
+  <header id="inicio"> <!-- Cabeçalho e destino do link Início. -->
+    <h1>Olá! Eu sou Gabriel Geoffroy</h1> <!-- Título principal da página. -->
+    <p>Estudante de Técnico em Informática para Internet e interessado em tecnologia.</p> <!-- Apresentação breve. -->
+  </header> <!-- Encerra o cabeçalho. -->
 
-    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background-color: #000000; color: #d4af37; }
+  <nav aria-label="Navegação principal"> <!-- Menu principal da página. -->
+    <a href="#inicio">Início</a> | <!-- Volta ao início da página. -->
+    <a href="sobre.html">Sobre a página</a> | <!-- Abre a página sobre.html. -->
+    <a href="#contato">Entre em contato</a> <!-- Vai para o formulário de contato. -->
+  </nav> <!-- Encerra o menu. -->
 
-    header, section, footer { width: min(900px, 90%); margin: 0 auto; }
-    header { padding: 48px 0 32px; text-align: center; }
-    nav { width: min(900px, 90%); margin: 0 auto; padding: 16px 0 24px; text-align: center; }
-    nav a { color: #ffd700; }
-    nav a:hover { color: #ffffff; }
+  <main> <!-- Conteúdo principal da página. -->
+    <section class="apresentacao"> <!-- Seção de apresentação pessoal. -->
+      <img class="foto-perfil" src="img/Geoffroy.PNG" alt="Foto de Gabriel Geoffroy"> <!-- Foto de perfil. -->
+      <div> <!-- Agrupa os textos da apresentação. -->
+        <h2>Sobre mim</h2> <!-- Título da apresentação. -->
+        <p>Meu nome é Gabriel Henrique Fernandes Geoffroy. Sou formado em Redes e atualmente curso Sistemas de Informação e Técnico em Informática para Internet. Tenho um forte foco na resolução de problemas e procuro estar sempre atualizado com as tendências e novas tecnologias do mercado.</p> <!-- Descrição pessoal e acadêmica. -->
+      </div> <!-- Encerra o grupo de textos. -->
+    </section> <!-- Encerra a apresentação. -->
 
-    h1, h2 { color: #d4af37; }
+    <section> <!-- Seção de hobbies e interesses. -->
+      <h2>Meus hobbies e interesses</h2> <!-- Título da lista de interesses. -->
+      <ul> <!-- Lista de interesses. -->
+        <li>Aprender programação e novas tecnologias</li> <!-- Primeiro interesse. -->
+        <li>Jogar futebol e Viajar</li> <!-- Segundo interesse. -->
+        <li>Pesquisar assuntos relacionados à informática</li> <!-- Terceiro interesse. -->
+      </ul> <!-- Encerra a lista. -->
+    </section> <!-- Encerra a seção de hobbies. -->
 
-    section { margin-bottom: 24px; padding: 24px; background: #111111; border: 1px solid #d4af37; border-radius: 12px; box-shadow: 0 4px 12px rgb(212 175 55 / 20%); }
-    .apresentacao { display: flex; align-items: center; gap: 24px; }
-    .foto-perfil { width: 140px; height: 140px; flex-shrink: 0; border-radius: 50%; border: 4px solid #d4af37; }
-    li { margin-bottom: 8px; }
-    fieldset {
-      border: 1px solid #d4af37;
-      border-radius: 8px;
-      padding: 20px;
-    }
+    <section id="contato"> <!-- Seção com o formulário de contato. -->
+      <h2>Entre em contato</h2> <!-- Título da seção de contato. -->
+      <form> <!-- Formulário para envio de mensagem. -->
+        <fieldset> <!-- Agrupa os campos do formulário. -->
+          <legend>Formulário de contato</legend> <!-- Título do grupo de campos. -->
 
-    legend {
-      color: #ffd700;
-      font-weight: bold;
-    }
+          <label for="nome">Nome:</label> <!-- Identifica o campo de nome. -->
+          <input type="text" id="nome" name="nome" required> <!-- Campo obrigatório para o nome. -->
 
-    label {
-      display: block;
-      margin-top:  14px;
-      margin-bottom: 6px;
-    }
+          <label for="email">E-mail:</label> <!-- Identifica o campo de e-mail. -->
+          <input type="email" id="email" name="email" required> <!-- Campo obrigatório para o e-mail. -->
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #d4af37;
-      border-radius: 6px;
-      background: #222222;
-      color: #ffffff;
-      font: inherit;  
-    }
+          <label for="assunto">Assunto:</label> <!-- Identifica o campo de assunto. -->
+          <input type="text" id="assunto" name="assunto" required> <!-- Campo obrigatório para o assunto. -->
 
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-    footer { padding: 16px 0 32px; text-align: center; color: #d4af37; }
-    a { color: #ffd700; }
-    a:hover { color: #ffffff; }
-    @media (max-width: 600px) { .apresentacao { flex-direction: column; text-align: center; } }
-  </style>
-</head>
-<body>
-  <header id="inicio">
-    <h1>Olá! Eu sou Gabriel Geoffroy</h1>
-    <p>Estudante de Técnico em Informática para Internet e interessado em tecnologia.</p>
-  </header>
+          <label for="mensagem">Mensagem:</label> <!-- Identifica a área da mensagem. -->
+          <textarea id="mensagem" name="mensagem" required></textarea> <!-- Campo obrigatório para a mensagem. -->
 
-  <nav aria-label="Navegação principal">
-    <a href="#inicio">Início</a> |
-    <a href="sobre.html">Sobre a página</a>
-    <a href="#contato">Entre em contato</a>
-  </nav>
+          <div class="botoes-formulario"> <!-- Agrupa os botões do formulário. -->
+            <button type="submit">Enviar</button> <!-- Envia o formulário. -->
+            <button type="reset">Limpar</button> <!-- Limpa os campos preenchidos. -->
+          </div> <!-- Encerra o grupo de botões. -->
+        </fieldset> <!-- Encerra o grupo de campos. -->
+      </form> <!-- Encerra o formulário. -->
+    </section> <!-- Encerra a seção de contato. -->
+  </main> <!-- Encerra o conteúdo principal. -->
 
-  <main>
-    <section class="apresentacao">
-      <img class="foto-perfil" src="img/Geoffroy.PNG" alt="Foto de Gabriel Geoffroy">
-      <div>
-        <h2>Sobre mim</h2>
-        <p>Meu nome é Gabriel Henrique Fernandes Geoffroy. Sou formado em Redes e atualmente curso Sistemas de Informação e Técnico em Informática para Internet. Tenho um forte foco na resolução de problemas e procuro estar sempre atualizado com as tendências e novas tecnologias do mercado.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Meus hobbies e interesses</h2>
-      <ul>
-        <li>Aprender programação e novas tecnologias</li>
-        <li>Jogar futebol e Viajar</li>
-        <li>Pesquisar assuntos relacionados à informática</li>
-      </ul>
-    </section>
-
-  <section id="contato">
-      <h2>Entre em contato</h2>
-      <form>
-        <fieldset>
-          <legend>Formulário de contato</legend>
-
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required>
-
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="assunto">Assunto:</label>
-          <input type="text" id="assunto" name="assunto" required>
-
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" required></textarea>
-
-          <div class="botoes-formulario">
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
-          </div>
-        </fieldset>
-      </form>
-  </section>  
- </main>
-
-  <footer>
-    <p>Página pessoal criada para a disciplina Programação Web I.</p>
-    <p>
-      <a href="https://www.linkedin.com/in/gabriel-geoffroy-611224204/" target="_blank" rel="noopener noreferrer">
-        Meu perfil no LinkedIn
-      </a>
-    </p>
-  </footer>
-</body>
-</html>
+  <footer> <!-- Rodapé da página. -->
+    <p>Página pessoal criada para a disciplina Programação Web I.</p> <!-- Informa a finalidade da página. -->
+    <p> <!-- Inicia o parágrafo do LinkedIn. -->
+      <a href="https://www.linkedin.com/in/gabriel-geoffroy-611224204/" target="_blank" rel="noopener noreferrer"> <!-- Link para o perfil profissional. -->
+        Meu perfil no LinkedIn <!-- Texto do link. -->
+      </a> <!-- Encerra o link. -->
+    </p> <!-- Encerra o parágrafo do LinkedIn. -->
+  </footer> <!-- Encerra o rodapé. -->
+</body> <!-- Encerra o conteúdo visível. -->
+</html> <!-- Encerra o documento HTML. -->
