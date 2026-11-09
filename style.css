@@ -1,140 +1,289 @@
+/* Seleciona todos os elementos da página. */
 * {
+  /* Inclui padding e borda dentro da largura e altura definidas. */
   box-sizing: border-box;
 }
 
+/* Define o estilo geral do corpo da página. */
 body {
+  /* Remove a margem padrão do navegador. */
   margin: 0;
+  /* Define Arial como fonte principal e sans-serif como alternativa. */
   font-family: Arial, sans-serif;
+  /* Define o espaçamento vertical entre as linhas do texto. */
   line-height: 1.6;
+  /* Define o fundo da página como preto. */
   background-color: #000000;
+  /* Define a cor padrão dos textos como dourado. */
   color: #d4af37;
+  /* Cria três colunas para estruturar as áreas principais da página. */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, min(900px, 90vw)) minmax(0, 1fr);
 }
 
+/* Faz o cabeçalho e o rodapé ocuparem toda a largura da grade. */
 header,
-nav,
-main,
-section,
 footer {
-  width: min(900px, 90%);
-  margin: 0 auto;
+  grid-column: 1 / -1;
+  width: 100%;
 }
 
+/* Posiciona o menu e o conteúdo na coluna central da grade. */
+nav,
+main {
+  grid-column: 2;
+  width: 100%;
+  margin: 0;
+}
+
+/* Organiza as seções principais em uma coluna com espaçamento uniforme. */
+main {
+  display: grid;
+  gap: 24px;
+  align-content: start;
+}
+
+/* Estiliza o cabeçalho. */
 header {
-  padding: 48px 0 32px;
+  /* Define o espaçamento interno: acima, laterais e abaixo. */
+  padding: 48px max(5%, calc((100% - 900px) / 2)) 32px;
+  /* Centraliza o texto. */
   text-align: center;
 }
 
+/* Estiliza o menu de navegação. */
 nav {
+  /* Define o espaçamento interno do menu. */
   padding: 16px 0 24px;
+  /* Centraliza os links. */
   text-align: center;
 }
 
+/* Seleciona os títulos h1 e h2. */
 h1,
 h2 {
+  /* Define a cor dos títulos. */
   color: #d4af37;
 }
 
+/* Seleciona todos os links. */
 a {
+  /* Define a cor normal dos links. */
   color: #ffd700;
 }
 
+/* Aplica estilo quando o mouse passa sobre um link. */
 a:hover {
+  /* Muda a cor do link para branco. */
   color: #ffffff;
 }
 
+/* Seleciona cada seção de conteúdo. */
 section {
-  margin-bottom: 24px;
+  /* Cria espaço interno em todos os lados. */
   padding: 24px;
+  /* Define o fundo da seção. */
   background: #111111;
+  /* Cria uma borda dourada de 1px. */
   border: 1px solid #d4af37;
+  /* Arredonda os cantos da seção. */
   border-radius: 12px;
+  /* Adiciona uma sombra dourada discreta. */
   box-shadow: 0 4px 12px rgb(212 175 55 / 20%);
 }
 
-.apresentacao {
+/* Organiza os cartões em colunas usando Grid Layout. */
+.tecnologias-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Usa Flexbox para organizar o conteúdo interno dos cartões. */
+.cartao-tecnologia {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  padding: 18px;
+  background: #181818;
+  border: 1px solid #6f5b20;
+  border-radius: 10px;
+}
+
+.cartao-tecnologia h3,
+.cartao-tecnologia p {
+  margin: 0;
+}
+
+/* Distribui as tags de cada cartão com Flexbox. */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  margin: 0;
+  padding: 4px 10px;
+  color: #ffd700;
+  background: #292410;
+  border: 1px solid #6f5b20;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* Seleciona a seção com a classe apresentacao. */
+.apresentacao {
+  /* Organiza os elementos filhos lado a lado. */
+  display: flex;
+  /* Alinha os elementos verticalmente ao centro. */
   align-items: center;
+  /* Define o espaço entre a foto e o texto. */
   gap: 24px;
 }
 
+/* Seleciona a imagem de perfil. */
 .foto-perfil {
+  /* Define a largura da imagem. */
   width: 140px;
+  /* Define a altura da imagem. */
   height: 140px;
+  /* Impede a imagem de diminuir no Flexbox. */
   flex-shrink: 0;
+  /* Cria uma borda dourada ao redor da imagem. */
   border: 4px solid #d4af37;
+  /* Transforma a imagem em um círculo. */
   border-radius: 50%;
 }
 
+/* Seleciona os itens da lista. */
 li {
+  /* Cria espaço abaixo de cada item. */
   margin-bottom: 8px;
 }
 
+/* Seleciona o grupo de campos do formulário. */
 fieldset {
+  /* Cria espaço interno no grupo. */
   padding: 20px;
+  /* Cria uma borda dourada. */
   border: 1px solid #d4af37;
+  /* Arredonda os cantos do grupo. */
   border-radius: 8px;
 }
 
+/* Seleciona a legenda do formulário. */
 legend {
+  /* Define a cor da legenda. */
   color: #ffd700;
+  /* Deixa a legenda em negrito. */
   font-weight: bold;
 }
 
+/* Seleciona os rótulos dos campos. */
 label {
+  /* Faz cada rótulo ocupar uma linha inteira. */
   display: block;
+  /* Cria espaço acima do rótulo. */
   margin-top: 14px;
+  /* Cria espaço abaixo do rótulo. */
   margin-bottom: 6px;
 }
 
+/* Seleciona os campos de entrada e a área de texto. */
 input,
 textarea {
+  /* Faz os campos ocuparem toda a largura disponível. */
   width: 100%;
+  /* Cria espaço interno nos campos. */
   padding: 10px;
+  /* Cria uma borda dourada. */
   border: 1px solid #d4af37;
+  /* Arredonda os cantos dos campos. */
   border-radius: 6px;
+  /* Define o fundo dos campos. */
   background: #222222;
+  /* Define a cor do texto digitado. */
   color: #ffffff;
+  /* Usa a fonte do elemento pai. */
   font: inherit;
 }
 
+/* Define estilos específicos para a área de mensagem. */
 textarea {
+  /* Define uma altura mínima. */
   min-height: 140px;
+  /* Permite redimensionar somente na vertical. */
   resize: vertical;
 }
 
+/* Seleciona o contêiner dos botões. */
 .botoes-formulario {
+  /* Coloca os botões lado a lado. */
   display: flex;
+  /* Define o espaço entre os botões. */
   gap: 12px;
+  /* Cria espaço acima dos botões. */
   margin-top: 18px;
 }
 
+/* Seleciona os botões. */
 button {
+  /* Define o espaçamento interno do botão. */
   padding: 10px 18px;
+  /* Cria uma borda dourada. */
   border: 1px solid #d4af37;
+  /* Arredonda os cantos do botão. */
   border-radius: 6px;
+  /* Define o fundo do botão. */
   background: #d4af37;
+  /* Define a cor do texto do botão. */
   color: #000000;
+  /* Usa a fonte do elemento pai. */
   font: inherit;
+  /* Deixa o texto em negrito. */
   font-weight: bold;
+  /* Mostra o cursor de mão sobre o botão. */
   cursor: pointer;
 }
 
+/* Aplica estilo quando o mouse passa sobre o botão. */
 button:hover {
+  /* Clareia a cor do fundo. */
   background: #ffd700;
 }
 
+/* Estiliza o rodapé. */
 footer {
-  padding: 16px 0 32px;
+  /* Define o espaçamento interno do rodapé. */
+  padding: 16px max(5%, calc((100% - 900px) / 2)) 32px;
+  /* Centraliza o texto. */
   text-align: center;
 }
 
+/* Aplica as regras abaixo em telas de até 600px. */
 @media (max-width: 600px) {
+  /* Exibe um cartão por linha em telas pequenas. */
+  .tecnologias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Seleciona a seção de apresentação em telas pequenas. */
   .apresentacao {
+    /* Coloca a foto e o texto um abaixo do outro. */
     flex-direction: column;
+    /* Centraliza o texto. */
     text-align: center;
   }
 
+  /* Seleciona os botões em telas pequenas. */
   .botoes-formulario {
+    /* Coloca os botões um abaixo do outro. */
     flex-direction: column;
   }
 }
