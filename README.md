@@ -2,7 +2,7 @@
 
 ## Captura da Atividade 03
 
-![Página pessoal com Flexbox e Grid](./img/ATVD%2003.jpeg)
+![Página pessoal com Flexbox e Grid](./img/Atividade%20-%20P%C3%A1gina%20Pessoal%20com%20Flexbox%20e%20Grid.jpeg)
 
 ## Formulário de contato
 
