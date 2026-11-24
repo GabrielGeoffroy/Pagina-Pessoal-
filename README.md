@@ -1,9 +1,13 @@
 # Página Pessoal
 
-## Atividade - Página Pessoal com Flexbox e Grid
+## Atividade — Página Pessoal com Flexbox e Grid
 
-![Página pessoal com Flexbox e Grid](./img/Atividade%20-%20P%C3%A1gina%20Pessoal%20com%20Flexbox%20e%20Grid.jpeg)
+### Captura completa
 
-## Formulário de contato
+![Página pessoal completa em 767 px](./img/767px.jpeg)
 
-![Formulário de contato](./img/print-formulario.png)
+### Layout em telas maiores
+
+![Página pessoal em 1023 px](./img/1023px.jpeg)
+
+![Página pessoal em 1024 px](./img/1024px.jpeg)
